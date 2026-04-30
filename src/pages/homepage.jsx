@@ -9,7 +9,7 @@ export default function Homepage() {
     const [team, setTeam] = useState([]);
 
     function redirectTeam(type) {
-        navigate(`/predictor/${type}`);
+        navigate(`/teamscore/${type}`);
     }
     return(
         <>
