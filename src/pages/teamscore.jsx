@@ -20,7 +20,7 @@ export default function Teamscore() {
         setBudget(res.data.budget);
         setTotalScore(res.data.total);
         setScore(res.data.score)
-            setDefenders(starters.filter(p=>p.position == 2 && p.bench_order == 0))
+        setDefenders(starters.filter(p=>p.position == 2 && p.bench_order == 0))
     })
     .catch(err => console.log("API Error: ",err));
     }, [type]);
@@ -30,7 +30,7 @@ export default function Teamscore() {
         <div>
             <h1>Prem Predictor</h1>
             <h2> { type } </h2>
-            {starters.length > 0 ? (
+            {Array.isArray(starters) && starters.length > 0 ? (
             <div id = "gk">
                 <div className="player-box">
                     <h1>{starters.find(p=>p.position == 1 && p.bench_order == 0)?.name}</h1>
