@@ -11,7 +11,7 @@ export default function Teamscore() {
     const [benched, setBenched] = useState([]);
 
     useEffect(() => {
-    axios.get(`https://predictor-backend-nine.vercel.app/api/scores/${type}`, {headers: { Authorization:`Bearer ${localStorage.getItem("token")}`}})
+    axios.get(`https://predictor-backend-nine.vercel.app/api/scores/${type}`)
     .then(res => {
         setStarters(res.data.starters);
         setBenched(res.data.submitted);
