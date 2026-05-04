@@ -20,7 +20,7 @@ export default function Teamscore() {
         setBudget(res.data.budget);
         setTotalScore(res.data.total);
         setScore(res.data.score)
-        setDefenders(Starters.filter(p=>p.position == 2 && p.bench_order == 0))
+        setDefenders(starters.filter(p=>p.position == 2 && p.bench_order == 0))
     })
     .catch(err => console.log("API Error: ",err));
     }, [type]);
