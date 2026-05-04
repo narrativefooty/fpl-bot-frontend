@@ -11,6 +11,8 @@ export default function Teamscore() {
     const [benched, setBenched] = useState([]);
     const [budget, setBudget] = useState([])
     const [defenders, setDefenders] = useState([])
+    const [midfielders, setMidfielders] = useState([])
+    const [forwards, setForwards] = useState([])
 
     useEffect(() => {
     axios.get(`https://fpl-bot-backend.vercel.app/api/scores/${type}`)
@@ -21,6 +23,9 @@ export default function Teamscore() {
         setTotalScore(res.data.total);
         setScore(res.data.score)
         setDefenders(res.data.starters.filter(p=>p.position == 2 && p.bench_order == 0))
+        setMidfielders(res.data.starters.filter(p=>p.position == 3 && p.bench_order == 0))
+        setForwards(res.data.starters.filter(p=>p.position == 4 && p.bench_order == 0))
+
     })
     .catch(err => console.log("API Error: ",err));
     }, [type]);
@@ -41,7 +46,18 @@ export default function Teamscore() {
                     )
                 )}
                 </div>
-
+                <div className="player-box">
+                {midfielders.map((Player,index) => (
+                    <h1 key = {index}>{Player.name}</h1>
+                    )
+                )}
+                </div>
+                <div className="player-box">
+                {forwards.map((Player,index) => (
+                    <h1 key = {index}>{Player.name}</h1>
+                    )
+                )}
+                </div>
             </div>
             ) : (
                 <h1> loading... </h1>
