@@ -27,8 +27,10 @@ export default function Teamscore() {
         <div>
             <h1>Prem Predictor</h1>
             <h2> { type } </h2>
-            <div>
-                
+            <div id = "gk">
+                <div className="player-box">
+                    <h1>{starters.find(p=>p.position == 1 && p.bench_order == 0)?.name}</h1>
+                </div>
             </div>
         </div>
         </>
