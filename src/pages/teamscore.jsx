@@ -9,13 +9,14 @@ export default function Teamscore() {
     const [totalScore, setTotalScore] = useState(0);
     const [starters, setStarters] = useState([]);
     const [benched, setBenched] = useState([]);
+    const [budget, setBudget] = useState([])
 
     useEffect(() => {
     axios.get(`https://fpl-bot-backend.vercel.app/api/scores/${type}`)
     .then(res => {
         setStarters(res.data.starting);
         setBenched(res.data.benchers);
-        setLocked(res.data.locked);
+        setLocked(res.data.budget);
         setTotalScore(res.data.total);
         setScore(res.data.score)
     })
