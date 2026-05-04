@@ -15,7 +15,7 @@ export default function Teamscore() {
     useEffect(() => {
     axios.get(`https://fpl-bot-backend.vercel.app/api/scores/${type}`)
     .then(res => {
-        setStarters(res.data.starting);
+        setStarters(res.data.starters);
         setBenched(res.data.benchers);
         setBudget(res.data.budget);
         setTotalScore(res.data.total);
