@@ -41,7 +41,6 @@ export default function Teamscore() {
                     )
                 )}
                 </div>
-                <h1> {defenders}</h1>
 
             </div>
             ) : (
