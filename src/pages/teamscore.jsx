@@ -16,7 +16,7 @@ export default function Teamscore() {
     .then(res => {
         setStarters(res.data.starting);
         setBenched(res.data.benchers);
-        setLocked(res.data.budget);
+        setBudget(res.data.budget);
         setTotalScore(res.data.total);
         setScore(res.data.score)
     })
