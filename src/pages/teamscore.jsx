@@ -37,8 +37,7 @@ export default function Teamscore() {
             <h2> { type } </h2>
             {Array.isArray(starters) && starters.length > 0 ? (
             <div id = "gk">
-                <h1> Total Score : {totalScore}</h1>
-                <h1> Score : {totalScore}</h1>
+                <h1> Score : {score}</h1>
                 <div className="player-box">
                     <div>
                     <h1>{starters.find(p=>p.position == 1 && p.bench_order == 0)?.name}</h1>
