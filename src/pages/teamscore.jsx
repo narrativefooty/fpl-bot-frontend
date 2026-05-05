@@ -38,8 +38,10 @@ export default function Teamscore() {
             {Array.isArray(starters) && starters.length > 0 ? (
             <div id = "gk">
                 <div className="player-box">
+                    <div>
                     <h1>{starters.find(p=>p.position == 1 && p.bench_order == 0)?.name}</h1>
                     <h1>{starters.find(p=>p.position == 1 && p.bench_order == 0)?.current_points}</h1>
+                    </div>
                 </div>
                 <div className="player-box">
                 {defenders.map((Player,index) => (
