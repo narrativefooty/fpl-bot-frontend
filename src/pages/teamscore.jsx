@@ -44,7 +44,7 @@ export default function Teamscore() {
                 {defenders.map((Player,index) => (
                     <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    <h1> {Player.score}</h1>
+                    <h1> {Player.current_points}</h1>
                     </div>                    )
                 )}
                 </div>
@@ -52,7 +52,7 @@ export default function Teamscore() {
                 {midfielders.map((Player,index) => (
                     <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    <h1> {Player.score}</h1>
+                    <h1> {Player.current_points}</h1>
                     </div>                    )
                 )}
                 </div>
@@ -60,7 +60,7 @@ export default function Teamscore() {
                 {forwards.map((Player,index) => (
                     <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    <h1> {Player.score}</h1>
+                    <h1> {Player.current_points}</h1>
                     </div>                    )
                 )}
                 </div>
@@ -68,7 +68,7 @@ export default function Teamscore() {
                 {benched.map((Player,index) => (
                     <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    <h1> {Player.score}</h1>
+                    <h1> {Player.current_points}</h1>
                     </div>
                     )
                 )}
