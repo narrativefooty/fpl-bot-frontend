@@ -22,9 +22,9 @@ export default function Teamscore() {
         setBudget(res.data.budget);
         setTotalScore(res.data.total);
         setScore(res.data.score)
-        setDefenders(res.data.starters.filter(p=>p.position == 2 && p.bench_order == 0))
-        setMidfielders(res.data.starters.filter(p=>p.position == 3 && p.bench_order == 0))
-        setForwards(res.data.starters.filter(p=>p.position == 4 && p.bench_order == 0))
+        //setDefenders(res.data.starters.filter(p=>p.position == 2 && p.bench_order == 0))
+        //setMidfielders(res.data.starters.filter(p=>p.position == 3 && p.bench_order == 0))
+        //setForwards(res.data.starters.filter(p=>p.position == 4 && p.bench_order == 0))
 
     })
     .catch(err => console.log("API Error: ",err));
