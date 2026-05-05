@@ -42,25 +42,34 @@ export default function Teamscore() {
                 </div>
                 <div className="player-box">
                 {defenders.map((Player,index) => (
+                    <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    )
+                    <h1> {Player.score}</h1>
+                    </div>                    )
                 )}
                 </div>
                 <div className="player-box">
                 {midfielders.map((Player,index) => (
+                    <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    )
+                    <h1> {Player.score}</h1>
+                    </div>                    )
                 )}
                 </div>
                 <div className="player-box">
                 {forwards.map((Player,index) => (
+                    <div>
                     <h1 key = {index}>{Player.name}</h1>
-                    )
+                    <h1> {Player.score}</h1>
+                    </div>                    )
                 )}
                 </div>
                 <div className="player-box">
                 {benched.map((Player,index) => (
+                    <div>
                     <h1 key = {index}>{Player.name}</h1>
+                    <h1> {Player.score}</h1>
+                    </div>
                     )
                 )}
                 </div>
