@@ -58,6 +58,12 @@ export default function Teamscore() {
                     )
                 )}
                 </div>
+                <div className="player-box">
+                {benched.map((Player,index) => (
+                    <h1 key = {index}>{Player.name}</h1>
+                    )
+                )}
+                </div>
             </div>
             ) : (
                 <h1> loading... </h1>
